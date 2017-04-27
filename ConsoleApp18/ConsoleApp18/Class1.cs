@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 
 namespace ConsoleApp18
 {
@@ -10,7 +7,27 @@ namespace ConsoleApp18
     {
         static void main()
         {
+            BinaryWriter dataout;
+            BinaryReader datain;
 
+            try
+            {
+                dataout = new BinaryWriter(new FileStream("testData",FileMode.Create));
+            }
+            catch(IOException exc)
+            {
+                Console.WriteLine(exc.Message);
+                return;
+            }
+            try
+            {
+                datain = new BinaryWriter(new FileStream("testData", FileMode.Create));
+            }
+            catch (IOException exc)
+            {
+                Console.WriteLine(exc.Message);
+                return;
+            }
         }
     }
 }
