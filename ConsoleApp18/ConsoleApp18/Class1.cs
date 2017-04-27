@@ -21,7 +21,7 @@ namespace ConsoleApp18
             }
             try
             {
-                datain = new BinaryWriter(new FileStream("testData", FileMode.Create));
+                datain = new BinaryReader(new FileStream("testData", FileMode.Create));
             }
             catch (IOException exc)
             {
